@@ -1,27 +1,41 @@
 # BarbosaCodeAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+![Angular](https://img.shields.io/badge/Angular-17.3.17-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4.18-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node-20.x-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![License](https://img.shields.io/badge/Licença-MIT-blue?style=for-the-badge)
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Sobre o Projeto
 
-## Code scaffolding
+**BarbosaCodeAngular** é um projeto de **portfólio pessoal** feito com **Angular 17** e **Tailwind CSS**, com foco em:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Estrutura modular e organizada
+- Componentes reutilizáveis
+- Design moderno, responsivo e clean
+- Fácil manutenção e escalabilidade
 
-## Build
+O portfólio possui as seguintes seções:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **Hero** – Introdução com foto e texto "Olá, eu sou o..."
+2. **Sobre mim** – Tecnologias que uso, habilidades, bancos de dados, backend etc.
+3. **Educação e Experiência** – Timeline de estudos e trabalhos
+4. **Skills** – Carrossel mostrando minhas tecnologias
+5. **Projetos** – Carrossel de projetos, clicando em cada projeto vai para página de detalhes
+6. **Contato** – Formulário de envio de mensagem
+7. **Footer** – Informações finais
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Estrutura do Projeto
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```text
+src/
+└─ app/
+   ├─ core/           # Componentes globais (header, footer, navbar)
+   ├─ home/           # Página principal (container das seções)
+   ├─ sections/       # Seções: hero, about, education, skills, projects, contact
+   ├─ project-details/# Página única com detalhes de projeto
+   └─ shared/         # Componentes reutilizáveis (cards, botões etc.)
+```

@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-galaxy-dark text-gray-200 font-sans;
+  height: 100%;
+}
+
+body {
+  background-image: theme("backgroundImage.galaxy-stars");
+  background-size: 800px 800px;
+  background-repeat: repeat;
+  animation: twinkle 6s infinite ease-in-out;
+}
