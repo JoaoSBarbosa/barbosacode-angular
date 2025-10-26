@@ -2,7 +2,7 @@
   position: relative;
   margin: 0 auto;
   padding: 2rem 0;
-  max-width: 900px;
+  max-width: 1400px;
 
   &::before {
     content: "";
@@ -19,13 +19,13 @@
     position: relative;
     width: 50%;
     padding: 1rem 2rem;
+    text-align: left; /* texto sempre alinhado à esquerda */
 
     &.left {
       left: 0;
-      text-align: right;
 
       .content {
-        margin-right: auto;
+        margin-right: auto; /* mantém o card à esquerda */
       }
     }
 
@@ -33,7 +33,7 @@
       left: 50%;
 
       .content {
-        margin-left: auto;
+        margin-left: auto; /* mantém o card à direita */
       }
     }
 

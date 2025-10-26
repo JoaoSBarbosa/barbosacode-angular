@@ -14,11 +14,16 @@ export class HeaderComponent {
     },
     {
       id: 2,
+      label: 'Habilidades',
+      href: '#skill',
+    },
+    {
+      id: 3,
       label: 'Experiência',
       href: '#experience',
     },
     {
-      id: 3,
+      id: 4,
       label: 'Tecnologias',
       href: '#technologies',
     },
