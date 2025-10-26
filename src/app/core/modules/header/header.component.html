@@ -1,6 +1,6 @@
 <header class="py-4">
   <app-structure>
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center py-2">
       <a
         href="https://github.com/JoaoSBarbosa"
         target="_blank"
@@ -8,28 +8,20 @@
         title="Acessar gitbub"
       >
         <img
-          src="assets/images/logo.svg"
+          src="assets/images/logo-3.svg"
           alt="GitHub Profile"
-          class="w-20 h-20 text-gray-300 hover:text-galaxy-accent transition"
+          class="w-20 h-20"
         />
       </a>
 
-      <nav class="space-x-8 text-gray-300 text-xl">
-        <a href="#education" class="hover:text-galaxy-accent transition"
-          >Educação</a
+      <nav class="flex space-x-6 text-gray-300 text-2xl">
+        <a
+          *ngFor="let link of links"
+          href="{{ link.href }}"
+          class="relative px-3 py-1 cursor-pointer after:block after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-[2px] after:bg-purple-custom/50 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:left-0 hover:text-purple-custom transition-colors"
         >
-        <a href="#experience" class="hover:text-galaxy-accent transition"
-          >Experiência</a
-        >
-        <a href="#technologies" class="hover:text-galaxy-accent transition"
-          >Tecnologias</a
-        >
-        <a href="#projects" class="hover:text-galaxy-accent transition"
-          >Projetos</a
-        >
-        <a href="#contact" class="hover:text-galaxy-accent transition"
-          >Contato</a
-        >
+          {{ link.label }}
+        </a>
       </nav>
     </div>
   </app-structure>
