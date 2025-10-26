@@ -1,0 +1,100 @@
+@import "variables";
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $purple-gray-custom;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background-color: rgba($galaxy-gray, 0.2);
+  backdrop-filter: blur(12px);
+  transition: box-shadow 0.3s ease;
+
+  // faz o card crescer para preencher a altura disponível do grid
+  height: 100%;
+
+  &:hover {
+    box-shadow: $shadow-purple-custom;
+  }
+
+  .skill-title {
+    font-size: 1.5rem; // text-2xl
+    font-weight: 700; // font-bold
+    color: $purple-custom;
+    margin-bottom: 0.75rem; // mb-3
+  }
+
+  .skill-description {
+    color: #d1d5db; // text-gray-300
+    margin-bottom: 1rem; // mb-4
+  }
+
+  .icons-grid {
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; // gap-4
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(6, 1fr); // sm:grid-cols-6
+    }
+
+    .icon-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem; // p-2
+      border-radius: 0.5rem; // rounded-lg
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba($purple-custom, 0.2);
+      }
+
+      .icon-image {
+        height: 2.5rem; // h-10
+        width: auto;
+        object-fit: contain;
+      }
+
+      .icon-tooltip {
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: 0.5rem;
+        background-color: $purple-custom;
+        color: white;
+        font-size: 0.75rem;
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        white-space: nowrap;
+        z-index: 50;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.15s ease, visibility 0.15s ease;
+
+        .icon-wrapper:hover & {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .icon-glow {
+        position: absolute;
+        inset: 0;
+        border-radius: 0.5rem;
+        opacity: 0;
+        background-color: $purple-custom;
+        filter: blur(12px);
+        transition: opacity 0.3s ease;
+
+        .icon-wrapper:hover & {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

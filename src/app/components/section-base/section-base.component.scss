@@ -1,0 +1,12 @@
+@import "variables";
+
+.section-base {
+  padding: 4rem 0; // py-16
+
+  .section-title {
+    font-size: 1.875rem; // text-3xl
+    font-weight: 700; // font-bold
+    color: $galaxy-accent;
+    margin-bottom: 1.5rem; // mb-6
+  }
+}

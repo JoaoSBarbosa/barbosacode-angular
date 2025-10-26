@@ -1,0 +1,43 @@
+// Cores
+$galaxy-blue: #1e293b;
+$galaxy-blue-accent: #38bdf8;
+$galaxy-dark: #0b0b0d;
+$galaxy-gray: #111111;
+$purple-custom: #694df8;
+$purple-gray-custom: #6f60c0;
+$galaxy-accent: #a78bfa;
+
+// Backgrounds
+$bg-galaxy-blue: $galaxy-blue;
+$bg-galaxy-blue-accent: $galaxy-blue-accent;
+$bg-galaxy-dark: $galaxy-dark;
+$bg-galaxy-gray: $galaxy-gray;
+$bg-purple-custom: $purple-custom;
+$bg-purple-gray-custom: $purple-gray-custom;
+$bg-galaxy-accent: $galaxy-accent;
+
+$max-width: 1200px;
+// Gradientes
+$bg-galaxy-stars: radial-gradient(
+    circle at 20% 20%,
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  ),
+  radial-gradient(
+    circle at 80% 40%,
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  ),
+  radial-gradient(
+    circle at 50% 80%,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+
+// Sombra
+$shadow-purple-custom: 0 10px 15px -3px rgba(105, 77, 248, 0.5),
+  0 4px 6px -2px rgba(105, 77, 248, 0.3);
+
+// Breakpoints
+$break-md: 768px;
+$break-lg: 1024px;

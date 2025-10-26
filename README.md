@@ -1,7 +1,6 @@
 # BarbosaCodeAngular
 
 ![Angular](https://img.shields.io/badge/Angular-17.3.17-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4.18-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node-20.x-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![License](https://img.shields.io/badge/Licença-MIT-blue?style=for-the-badge)
 

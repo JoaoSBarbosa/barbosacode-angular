@@ -1,23 +1,116 @@
-:host {
-  display: block;
+@import "variables";
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   position: relative;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  @media (min-width: $break-lg) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h1 {
+      font-weight: 700;
+      color: white;
+      font-size: 2.25rem; // 4xl
+      line-height: 1.2;
+
+      @media (min-width: $break-md) {
+        font-size: 3rem; // 5xl
+      }
+
+      @media (min-width: $break-lg) {
+        font-size: 3.75rem; // 6xl
+      }
+
+      .accent {
+        color: $galaxy-accent;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem; // 2xl
+      color: #9ca3af; // cinza claro
+      @media (min-width: $break-md) {
+        font-size: 1.875rem; // 3xl
+      }
+
+      .animate-blink {
+        animation: blink 1s step-start infinite;
+      }
+    }
+
+    p {
+      font-size: 1.125rem; // lg
+      color: #d1d5db; // cinza médio
+      line-height: 1.75;
+      max-width: 40rem; // max-w-2xl
+    }
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    img {
+      width: 100%;
+      max-width: 24rem; // max-w-md
+      border-radius: 0.5rem;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: $galaxy-accent;
+    }
+  }
 }
 
-.animate-blink {
-  animation: blink 1s step-end infinite;
-}
-
+// Animações
 @keyframes blink {
-  from,
-  to {
+  0%,
+  50%,
+  100% {
     opacity: 1;
   }
-  50% {
+  25%,
+  75% {
     opacity: 0;
   }
 }
 
-.typing-text {
-  display: inline-block;
-  border-right: 2px solid transparent;
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
 }

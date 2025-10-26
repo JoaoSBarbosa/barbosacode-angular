@@ -1,16 +1,94 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "variables";
 
-html,
-body {
-  @apply bg-galaxy-dark text-gray-200 font-sans;
-  height: 100%;
+// Reset global
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
 }
 
+// HTML e Body
+html,
 body {
-  background-image: theme("backgroundImage.galaxy-stars");
+  height: 100%;
+  background-color: $bg-galaxy-dark;
+  color: #e5e7eb; // equivalente a text-gray-200
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+// Imagens
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+// Links
+a {
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// Listas
+ul,
+ol {
+  list-style: none;
+}
+
+// Inputs, buttons e selects
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+// Scrollbar opcional
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($galaxy-accent, 0.3);
+  border-radius: 4px;
+}
+
+// Background galaxy stars
+body {
+  background-image: $bg-galaxy-stars;
   background-size: 800px 800px;
   background-repeat: repeat;
   animation: twinkle 6s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }

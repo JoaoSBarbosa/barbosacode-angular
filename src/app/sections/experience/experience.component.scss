@@ -1,8 +1,10 @@
+@import "variables";
+
 .timeline-center {
   position: relative;
   margin: 0 auto;
   padding: 2rem 0;
-  max-width: 1400px;
+  max-width: $max-width;
 
   &::before {
     content: "";
@@ -12,28 +14,30 @@
     transform: translateX(-50%);
     width: 3px;
     height: 100%;
-    background-color: rgba(167, 139, 250, 0.2); /* galaxy-accent/20 */
+    background-color: rgba($galaxy-accent, 0.2);
   }
 
   .timeline-item {
     position: relative;
     width: 50%;
     padding: 1rem 2rem;
-    text-align: left; /* texto sempre alinhado à esquerda */
+    box-sizing: border-box;
 
     &.left {
       left: 0;
+      text-align: right;
 
       .content {
-        margin-right: auto; /* mantém o card à esquerda */
+        margin-left: auto;
       }
     }
 
     &.right {
       left: 50%;
+      text-align: left;
 
       .content {
-        margin-left: auto; /* mantém o card à direita */
+        margin-right: auto;
       }
     }
 
@@ -43,23 +47,71 @@
       top: 1.5rem;
       width: 16px;
       height: 16px;
-      background-color: #a78bfa; /* galaxy-accent */
+      background-color: $galaxy-accent;
       border-radius: 50%;
-      border: 2px solid #0b0b0d; /* galaxy-dark */
+      border: 2px solid $galaxy-dark;
       left: calc(50% - 8px);
-      box-shadow: 0 0 10px rgba(167, 139, 250, 0.6);
+      box-shadow: 0 0 10px rgba($galaxy-accent, 0.6);
     }
 
     .content {
-      background-color: #1e293b; /* galaxy-blue */
+      background-color: $galaxy-blue;
+      border: 1px solid rgba($galaxy-accent, 0.1);
       border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: $shadow-purple-custom;
+      transition: border 0.3s;
       position: relative;
+
+      &:hover {
+        border-color: rgba($galaxy-accent, 0.5);
+      }
+
+      .period {
+        color: $purple-gray-custom;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        color: $galaxy-accent;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
+
+      .institution {
+        color: #9ca3af;
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .description {
+        color: #d1d5db;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+      }
+
+      .technologies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .tech-badge {
+          background-color: rgba($purple-gray-custom, 0.2);
+          color: $purple-custom;
+          font-size: 0.75rem;
+          padding: 0.25rem 0.75rem;
+          border-radius: 9999px;
+        }
+      }
     }
   }
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+// Responsividade
+@media (max-width: $break-md) {
   .timeline-center::before {
     left: 8px;
   }

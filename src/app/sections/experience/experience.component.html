@@ -5,33 +5,28 @@
       class="timeline-item"
       [ngClass]="{ left: i % 2 === 0, right: i % 2 !== 0 }"
     >
-      <div
-        class="content bg-galaxy-blue border border-galaxy-accent/10 rounded-2xl p-6 shadow-md hover:border-galaxy-accent/50 transition"
-      >
-        <span class="period text-purple-gray-custom">
+      <div class="content">
+        <span class="period">
           {{ experiente.startYear }}
           {{
             experiente.endYear ? " – " + experiente.endYear : " – Atualmente"
           }}
         </span>
 
-        <h3 class="text-galaxy-accent text-2xl font-semibold mt-2">
+        <h3>
           {{ experiente.jobTitle }}
         </h3>
 
-        <p class="institution text-gray-400 text-sm mb-2">
+        <p class="institution">
           {{ experiente.company }}
         </p>
 
-        <p class="description text-gray-300 text-sm leading-relaxed mb-3">
+        <p class="description">
           {{ experiente.description }}
         </p>
 
-        <div class="technologies flex flex-wrap gap-2">
-          <span
-            *ngFor="let tech of experiente.technologies"
-            class="tech-badge bg-purple-gray-custom/20 text-purple-custom text-xs px-3 py-1 rounded-full"
-          >
+        <div class="technologies">
+          <span *ngFor="let tech of experiente.technologies" class="tech-badge">
             {{ tech.technology }}
           </span>
         </div>

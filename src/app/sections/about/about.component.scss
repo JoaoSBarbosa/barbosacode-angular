@@ -1,0 +1,17 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-top: 2rem;
+
+  // garante que todos os cards tenham a mesma altura por row
+  align-items: stretch;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
