@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SectionBaseComponent {
   @Input() title: string = '';
-  @Input({ required: true }) sectionId: string = '';
+  @Input({ required: false }) sectionId: string = '';
 }
