@@ -6,6 +6,7 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CoreModule } from '../core/core.module';
 import { ComponentsModule } from '../components/components.module';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ComponentsModule } from '../components/components.module';
     ExperienceComponent,
     TechnologiesComponent,
     ProjectsComponent,
+    AboutComponent,
   ],
   imports: [CommonModule, CoreModule, ComponentsModule],
   exports: [
@@ -20,6 +22,7 @@ import { ComponentsModule } from '../components/components.module';
     ExperienceComponent,
     TechnologiesComponent,
     ProjectsComponent,
+    AboutComponent,
   ],
 })
 export class SectionsModule {}

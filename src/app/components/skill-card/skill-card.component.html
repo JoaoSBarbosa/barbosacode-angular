@@ -1,0 +1,29 @@
+<div
+  class="flex flex-col border border-purple-gray-custom rounded-xl p-6 bg-galaxy-gray/20 backdrop-blur-lg hover:shadow-purple-custom transition-shadow duration-300"
+>
+  <h3 class="text-2xl font-bold text-purple-custom mb-3">{{ title }}</h3>
+  <p class="text-gray-300 mb-4">{{ description }}</p>
+
+  <div class="grid grid-cols-4 sm:grid-cols-6 gap-4">
+    <div
+      *ngFor="let icon of icons"
+      class="relative group flex items-center justify-center p-2 rounded-lg cursor-pointer hover:bg-purple-custom/20 transition"
+    >
+      <img
+        [src]="icon.src"
+        [alt]="icon.name"
+        class="h-10 w-auto object-contain"
+      />
+      <!-- Tooltip -->
+      <span
+        class="absolute bottom-full mb-2 hidden group-hover:block bg-purple-custom text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50"
+      >
+        {{ icon.name }}
+      </span>
+      <!-- Glow effect -->
+      <div
+        class="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-50 bg-purple-custom blur-lg transition-all duration-300"
+      ></div>
+    </div>
+  </div>
+</div>

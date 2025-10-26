@@ -1,0 +1,21 @@
+<app-section-base title="Habilidades e Ferramentas">
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pt-8">
+    <app-skill-card
+      title="Backend"
+      description="Construção de APIs e microsserviços com arquitetura em camadas e boas práticas como SOLID e mensageria."
+      [icons]="backEndIcons"
+    ></app-skill-card>
+
+    <app-skill-card
+      title="Frontend"
+      description="Desenvolvimento de interfaces modernas e responsivas com React, Next.js e Tailwind."
+      [icons]="frontEndIcons"
+    ></app-skill-card>
+
+    <app-skill-card
+      title="Dados"
+      description="Modelagem e gerenciamento de bancos de dados relacionais e NoSQL com foco em performance."
+      [icons]="dataIcons"
+    ></app-skill-card>
+  </div>
+</app-section-base>
