@@ -1,4 +1,4 @@
-<header class="header">
+<!-- <header class="header">
   <app-structure>
     <div class="header__inner">
       <a
@@ -11,8 +11,75 @@
         <img src="assets/images/logo-3.svg" alt="GitHub Profile" />
       </a>
 
-      <nav>
+      <nav class="nav-desktop">
         <a *ngFor="let link of links" href="{{ link.href }}" class="nav-link">
+          {{ link.label }}
+        </a>
+      </nav>
+
+      <button
+        class="mobile-toggle"
+        (click)="menuOpen = !menuOpen"
+        aria-label="Abrir menu mobile"
+      >
+        <span [class.open]="menuOpen"></span>
+        <span [class.open]="menuOpen"></span>
+        <span [class.open]="menuOpen"></span>
+      </button>
+
+      <nav
+        class="nav-mobile"
+        [class.open]="menuOpen"
+        (click)="menuOpen = false"
+      >
+        <a *ngFor="let link of links" href="{{ link.href }}" class="nav-link">
+          {{ link.label }}
+        </a>
+      </nav>
+    </div>
+  </app-structure>
+</header> -->
+
+<header class="header">
+  <app-structure>
+    <div class="header__inner">
+      <!-- Logo -->
+      <a
+        href="https://github.com/JoaoSBarbosa"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Acessar GitHub"
+        class="logo"
+      >
+        <img src="assets/images/logo-3.svg" alt="GitHub Profile" />
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="nav-desktop">
+        <a *ngFor="let link of links" href="{{ link.href }}" class="nav-link">
+          {{ link.label }}
+        </a>
+      </nav>
+
+      <!-- Menu Mobile Toggle -->
+      <button
+        class="mobile-toggle"
+        (click)="toggleMenu()"
+        aria-label="Abrir menu mobile"
+      >
+        <span [class.open]="menuOpen"></span>
+        <span [class.open]="menuOpen"></span>
+        <span [class.open]="menuOpen"></span>
+      </button>
+
+      <!-- Menu Mobile Fullscreen -->
+      <nav class="nav-mobile" [class.open]="menuOpen">
+        <a
+          *ngFor="let link of links"
+          href="{{ link.href }}"
+          class="nav-link"
+          (click)="closeMenu()"
+        >
           {{ link.label }}
         </a>
       </nav>
