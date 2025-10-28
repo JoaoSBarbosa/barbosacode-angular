@@ -1,3 +1,15 @@
 <app-section-base title="Tecnologias" sectionId="technologies">
-  <h1>Tecs</h1>
+  <div class="carousel-auto">
+    <div class="carousel-track">
+      <div class="carousel-item" *ngFor="let tech of technologies">
+        <img [src]="tech.icon" [alt]="tech.name" />
+        <span>{{ tech.name }}</span>
+      </div>
+      <!-- Repete os itens para efeito infinito -->
+      <div class="carousel-item" *ngFor="let tech of technologies">
+        <img [src]="tech.icon" [alt]="tech.name" />
+        <span>{{ tech.name }}</span>
+      </div>
+    </div>
+  </div>
 </app-section-base>

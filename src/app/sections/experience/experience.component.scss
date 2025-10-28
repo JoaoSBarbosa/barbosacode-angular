@@ -25,19 +25,23 @@
 
     &.left {
       left: 0;
-      text-align: right;
+      // text-align: right;
+      text-align: left;
 
       .content {
-        margin-left: auto;
+        // margin-left: auto;
+        margin-right: 0;
       }
     }
 
     &.right {
       left: 50%;
+      // text-align: left;
       text-align: left;
 
       .content {
-        margin-right: auto;
+        // margin-right: auto;
+        margin-right: 0;
       }
     }
 
@@ -110,23 +114,33 @@
   }
 }
 
-// Responsividade
+/* ===================== */
+/* Responsividade Mobile */
+/* ===================== */
 @media (max-width: $break-md) {
-  .timeline-center::before {
-    left: 8px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    padding-left: 2.5rem;
-    text-align: left !important;
-
+  .timeline-center {
     &::before {
-      left: 0;
+      left: 1rem; // linha do meio agora à esquerda
     }
 
-    .content {
-      margin: 0;
+    .timeline-item {
+      width: 100%;
+      padding-left: 2.5rem;
+      padding-right: 1rem !important;
+      text-align: left !important;
+
+      &.left,
+      &.right {
+        left: 0;
+      }
+
+      &::before {
+        left: 0.5rem; // círculo alinhado à linha da esquerda
+      }
+
+      .content {
+        margin: 0;
+      }
     }
   }
 }
