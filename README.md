@@ -38,3 +38,152 @@ src/
    ├─ project-details/# Página única com detalhes de projeto
    └─ shared/         # Componentes reutilizáveis (cards, botões etc.)
 ```
+
+```
+├── 📁 src
+│   ├── 📁 app
+│   │   ├── 📁 components
+│   │   │   ├── 📁 interfaces
+│   │   │   │   └── 📄 skill-icon.interface.ts
+│   │   │   ├── 📁 section-base
+│   │   │   │   ├── 🌐 section-base.component.html
+│   │   │   │   ├── 🎨 section-base.component.scss
+│   │   │   │   ├── 📄 section-base.component.spec.ts
+│   │   │   │   └── 📄 section-base.component.ts
+│   │   │   ├── 📁 skill-card
+│   │   │   │   ├── 🌐 skill-card.component.html
+│   │   │   │   ├── 🎨 skill-card.component.scss
+│   │   │   │   ├── 📄 skill-card.component.spec.ts
+│   │   │   │   └── 📄 skill-card.component.ts
+│   │   │   └── 📄 components.module.ts
+│   │   ├── 📁 core
+│   │   │   ├── 📁 modules
+│   │   │   │   ├── 📁 contact
+│   │   │   │   │   ├── 🌐 contact.component.html
+│   │   │   │   │   ├── 🎨 contact.component.scss
+│   │   │   │   │   ├── 📄 contact.component.spec.ts
+│   │   │   │   │   └── 📄 contact.component.ts
+│   │   │   │   ├── 📁 footer
+│   │   │   │   │   ├── 🌐 footer.component.html
+│   │   │   │   │   ├── 🎨 footer.component.scss
+│   │   │   │   │   ├── 📄 footer.component.spec.ts
+│   │   │   │   │   └── 📄 footer.component.ts
+│   │   │   │   ├── 📁 header
+│   │   │   │   │   ├── 🌐 header.component.html
+│   │   │   │   │   ├── 🎨 header.component.scss
+│   │   │   │   │   ├── 📄 header.component.spec.ts
+│   │   │   │   │   └── 📄 header.component.ts
+│   │   │   │   └── 📁 hero
+│   │   │   │       ├── 🌐 hero.component.html
+│   │   │   │       ├── 🎨 hero.component.scss
+│   │   │   │       ├── 📄 hero.component.spec.ts
+│   │   │   │       └── 📄 hero.component.ts
+│   │   │   ├── 📁 structure
+│   │   │   │   ├── 🌐 structure.component.html
+│   │   │   │   ├── 🎨 structure.component.scss
+│   │   │   │   ├── 📄 structure.component.spec.ts
+│   │   │   │   └── 📄 structure.component.ts
+│   │   │   └── 📄 core.module.ts
+│   │   ├── 📁 data
+│   │   │   ├── 📄 education.data.ts
+│   │   │   └── 📄 experience.data.ts
+│   │   ├── 📁 sections
+│   │   │   ├── 📁 about
+│   │   │   │   ├── 🌐 about.component.html
+│   │   │   │   ├── 🎨 about.component.scss
+│   │   │   │   ├── 📄 about.component.spec.ts
+│   │   │   │   └── 📄 about.component.ts
+│   │   │   ├── 📁 education
+│   │   │   │   ├── 🌐 education.component.html
+│   │   │   │   ├── 🎨 education.component.scss
+│   │   │   │   ├── 📄 education.component.spec.ts
+│   │   │   │   └── 📄 education.component.ts
+│   │   │   ├── 📁 experience
+│   │   │   │   ├── 🌐 experience.component.html
+│   │   │   │   ├── 🎨 experience.component.scss
+│   │   │   │   ├── 📄 experience.component.spec.ts
+│   │   │   │   └── 📄 experience.component.ts
+│   │   │   ├── 📁 interface
+│   │   │   │   ├── 📄 education.interface.ts
+│   │   │   │   └── 📄 experience.interface.ts
+│   │   │   ├── 📁 projects
+│   │   │   │   ├── 🌐 projects.component.html
+│   │   │   │   ├── 🎨 projects.component.scss
+│   │   │   │   ├── 📄 projects.component.spec.ts
+│   │   │   │   └── 📄 projects.component.ts
+│   │   │   ├── 📁 technologies
+│   │   │   │   ├── 🌐 technologies.component.html
+│   │   │   │   ├── 🎨 technologies.component.scss
+│   │   │   │   ├── 📄 technologies.component.spec.ts
+│   │   │   │   └── 📄 technologies.component.ts
+│   │   │   └── 📄 sections.module.ts
+│   │   ├── 📄 app-routing.module.ts
+│   │   ├── 🌐 app.component.html
+│   │   ├── 🎨 app.component.scss
+│   │   ├── 📄 app.component.spec.ts
+│   │   ├── 📄 app.component.ts
+│   │   ├── 📄 app.module.server.ts
+│   │   └── 📄 app.module.ts
+│   ├── 📁 assets
+│   │   ├── 📁 images
+│   │   │   ├── 📁 icons
+│   │   │   │   ├── 🖼️ angular.svg
+│   │   │   │   ├── 🖼️ arrowUp.svg
+│   │   │   │   ├── 🖼️ bootstrap.svg
+│   │   │   │   ├── 🖼️ css.svg
+│   │   │   │   ├── 🖼️ docker.svg
+│   │   │   │   ├── 🖼️ elasticsearch.svg
+│   │   │   │   ├── 🖼️ facebook.svg
+│   │   │   │   ├── 🖼️ figma.svg
+│   │   │   │   ├── 🖼️ flyway.svg
+│   │   │   │   ├── 🖼️ github copy.svg
+│   │   │   │   ├── 🖼️ github.svg
+│   │   │   │   ├── 🖼️ hibernate.svg
+│   │   │   │   ├── 🖼️ html.svg
+│   │   │   │   ├── 🖼️ java.svg
+│   │   │   │   ├── 🖼️ javascript.svg
+│   │   │   │   ├── 🖼️ keycloak.svg
+│   │   │   │   ├── 🖼️ linkedin.svg
+│   │   │   │   ├── 🖼️ maven.svg
+│   │   │   │   ├── 🖼️ mysql-plain.svg
+│   │   │   │   ├── 🖼️ mysql.svg
+│   │   │   │   ├── 🖼️ nextjs.svg
+│   │   │   │   ├── 🖼️ php.svg
+│   │   │   │   ├── 🖼️ postgresql.svg
+│   │   │   │   ├── 🖼️ rabbitmq.svg
+│   │   │   │   ├── 🖼️ react.svg
+│   │   │   │   ├── 🖼️ redis.svg
+│   │   │   │   ├── 🖼️ sass.svg
+│   │   │   │   ├── 🖼️ spring-cloud.svg
+│   │   │   │   ├── 🖼️ spring-security.svg
+│   │   │   │   ├── 🖼️ spring.svg
+│   │   │   │   ├── 🖼️ tailwindcss.svg
+│   │   │   │   ├── 🖼️ typescript.svg
+│   │   │   │   ├── 🖼️ wildfly.svg
+│   │   │   │   └── 🖼️ wordpress.svg
+│   │   │   ├── 📁 profile
+│   │   │   │   └── 🖼️ barbosa.png
+│   │   │   ├── 📁 technologies
+│   │   │   ├── 🖼️ logo-2.png
+│   │   │   ├── 🖼️ logo-2.svg
+│   │   │   ├── 🖼️ logo-3.svg
+│   │   │   └── 🖼️ logo.svg
+│   │   └── ⚙️ .gitkeep
+│   ├── 📁 styles
+│   │   └── 🎨 _variables.scss
+│   ├── 📄 favicon.ico
+│   ├── 🌐 index.html
+│   ├── 📄 main.server.ts
+│   ├── 📄 main.ts
+│   └── 🎨 styles.scss
+├── ⚙️ .editorconfig
+├── ⚙️ .gitignore
+├── 🐳 Dockerfile
+├── 📝 README.md
+├── ⚙️ angular.json
+├── ⚙️ package.json
+├── 📄 server.ts
+├── ⚙️ tsconfig.app.json
+├── ⚙️ tsconfig.json
+└── ⚙️ tsconfig.spec.json
+```

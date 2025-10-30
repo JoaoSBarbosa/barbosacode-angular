@@ -4,19 +4,19 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  margin: 2rem 0;
-  padding: 1rem;
+  padding: 1rem 0;
 
   .carousel-track {
     display: flex;
-    gap: 2rem;
-    animation: scroll 5s linear infinite;
+    gap: 1.5rem;
+    animation: scroll 8s linear infinite; // muito mais rápido e suave
+    will-change: transform; // melhora performance
   }
 
   .carousel-item {
     flex: 0 0 auto;
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     background-color: $galaxy-blue;
     border-radius: 1rem;
     display: flex;
@@ -27,6 +27,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
+      transform: scale(1.1);
       box-shadow: 0 10px 20px rgba($galaxy-accent, 0.3);
     }
 
@@ -52,8 +53,12 @@
   }
 }
 
-/* Responsividade */
-@media (max-width: $break-md) {
+/* === Responsividade === */
+@media (max-width: 1024px) {
+  .carousel-track {
+    animation-duration: 6s; // acelera no tablet
+  }
+
   .carousel-item {
     width: 90px;
     height: 90px;
@@ -64,7 +69,27 @@
     }
 
     span {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .carousel-track {
+    animation-duration: 4s; // MUITO mais rápido no mobile
+  }
+
+  .carousel-item {
+    width: 70px;
+    height: 70px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    span {
+      font-size: 0.7rem;
     }
   }
 }

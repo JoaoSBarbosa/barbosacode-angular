@@ -21,14 +21,4 @@ export class TechnologiesComponent {
     { name: 'PostgreSQL', icon: 'assets/images/icons/postgresql.svg' },
     { name: 'Redis', icon: 'assets/images/icons/redis.svg' },
   ];
-
-  scrollLeft() {
-    const carousel = document.querySelector('.carousel') as HTMLElement;
-    carousel.scrollBy({ left: -200, behavior: 'smooth' });
-  }
-
-  scrollRight() {
-    const carousel = document.querySelector('.carousel') as HTMLElement;
-    carousel.scrollBy({ left: 200, behavior: 'smooth' });
-  }
 }
